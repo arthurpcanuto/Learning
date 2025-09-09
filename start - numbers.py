@@ -12,3 +12,7 @@ result = number * number
 print(result)
 
 print((239 + 588) * (239 + 588))
+
+total = 239 + 588
+print(total ** 2)
+
