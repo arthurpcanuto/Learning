@@ -141,3 +141,10 @@ friend_foods.append('ice cream')
 print(my_foods)
 print(friend_foods)
 #The first line creates a list called my_foods.
+#The second line copies the entire list my_foods to a new list called friend_foods.
+#The third line appends a new food to the list my_foods.
+#The fourth line appends a different food to the list friend_foods.
+#The last two lines show that the lists are different.
+#If we had written friend_foods = my_foods, neither list would have been independent.
+#Any change made to either list would have affected both lists.
+
