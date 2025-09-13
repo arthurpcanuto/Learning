@@ -148,3 +148,26 @@ print(friend_foods)
 #If we had written friend_foods = my_foods, neither list would have been independent.
 #Any change made to either list would have affected both lists.
 
+#Tuples
+#A tuple is a collection of items that cannot be changed. Meaning tuples are an immutable list.
+#Tuples are defined by enclosing the items in parentheses, separated by commas.
+#For example:
+dimensions = (1920, 1080)
+#This could be a rectangle whose width is 1920 and height is 1080 and does not change.
+print(dimensions[0])
+print(dimensions[1])
+#We can access the items in a tuple using indexing, just like we do with lists.
+#Lets see what happens when we try to change a value in a tuple.
+#   dimensions[0] = 2000
+#This will give us a TypeError because tuples are immutable and do not support item assignment.
+#We can loop through the items in a tuple using a for loop just like we do with a list.
+for dimension in dimensions:
+    print(dimension)
+#Although we can't change a tuple, we can assign a new tuple to a variable that
+#holds a tuple.
+#If we wanted to change the dimensions of our rectangle, we could redefine the tuple:
+dimensions = (2000, 1080)
+for dimension in dimensions:
+    print(dimension)
+#This is not changing the tuple, but rather assigning a new tuple to the variable dimensions.
+#We use tuples when we want to store a set of values that should not change throughout the life of a program.
