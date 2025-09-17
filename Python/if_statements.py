@@ -137,3 +137,99 @@ if not can_edit:
 #Boolean values can be very useful for managing the state of a program or a particular
 #condition within the program.
 
+#if Statements
+#Simple if statements
+#if conditional_test:
+#    do something
+#The code above represents the basic structure of a simple if statement in Python.
+#The simplest kind of if statement has one test and one action.
+#We can put any conditional test in the first line, and any action in the indented block.
+age = 19
+if age >= 18:
+    print("You are old enough to vote!")
+#The code above checks if the value of age is greater than or equal to 18.
+#All indented lines after an if statement will be executed if the test passes, and the entire block
+#of indented lines will be ignored if the test does not pass (fails).
+
+#If-else Statements
+#An if-else statement has two possible outcomes. If the conditional test passes, one block of code
+#is executed. If the test fails, a different block of code is executed.
+age = 17
+if age >= 18:
+    print("You are old enough to vote!")
+else:
+    print("You are not old enough to vote!")
+#The code above checks if the value of age is greater than or equal to 18.
+#If the test passes, it prints a message saying the person is old enough to vote.
+#If the test fails, it prints a message saying the person is not old enough to vote.
+#The if-else structure works well in situations in which we want one of two possible outcomes.
+
+#If-elif-else Chains
+#An if-elif-else chain is useful when we need to test more than two possible situations.
+#The elif keyword is short for "else if," and it allows us to check multiple conditions.
+#It runs each conditional test in order until one passes. When a test passes, the corresponding block
+#of code is executed, and the rest of the chain is skipped.
+age = 12
+if age < 4:
+    print("Your admission cost is $0.")
+elif age < 18:
+    print("Your admission cost is $10.")
+else:
+    print("Your admission cost is $15.")
+#The code above checks the value of age and determines the admission cost based on the age group.
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 10
+else:
+    price = 15
+print(f"Your admission cost is ${price}.")
+#The code above does the same thing as the previous example but stores the admission cost in a
+#variable named price before printing it.
+#In addition to being more efficient, this approach makes it easier to change the price later in the program
+#without having to modify multiple print statements.
+
+#Udin multiple elif Blocks
+#You can use as many elif blocks as you need in an if-elif-else chain.
+#Python executes only one block in an if-elif-else chain. Once a condition passes,
+#the rest of the chain is skipped.
+age = 65
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 10
+else:
+    price = 15
+print(f"Your admission cost is ${price}.")
+
+#Omitting the else Block
+#The else block is not required in an if-elif-else chain. If you omit the else block,
+#Python will simply skip the entire if-elif-else chain if none of the conditions pass.
+#This can be useful when you want to take action only for certain conditions and do nothing
+#for others.
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 10
+elif age < 65:
+    price = 15
+print(f"Your admission cost is ${price}.")
+
+#Testing Multiple Conditions
+#YIn this case, we should use a series of if statements with no elif or else blocks.
+#This way, each condition is checked independently, and multiple blocks of code can be executed
+#if more than one condition passes.
+requested_toppings = ['mushrooms', 'extra cheese']
+if 'mushrooms' in requested_toppings:
+    print("Adding mushrooms.")
+if 'pepperoni' in requested_toppings:
+    print("Adding pepperoni.")    
+if 'extra cheese' in requested_toppings:
+    print("Adding extra cheese.")
+print("\nFinished making your pizza!")
+#The code above checks for each requested topping independently.
+#In summary, if we want only one block of code to run based on the first condition that passes,
+#we use an if-elif-else chain. If we want to check multiple conditions and potentially run multiple blocks
+#of code, we use separate if statements.
