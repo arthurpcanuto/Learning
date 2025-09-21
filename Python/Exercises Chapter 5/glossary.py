@@ -14,6 +14,3 @@ print(f"{words[1]}:\n    {definitions[1]}")
 print(f"{words[2]}:\n    {definitions[2]}")
 print(f"{words[3]}:\n    {definitions[3]}")
 print(f"{words[4]}:\n    {definitions[4]}")
-
-
-
