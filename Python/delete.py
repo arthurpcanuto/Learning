@@ -54,3 +54,13 @@ alien_0 = {'color': 'green', 'points': 5}
 print(alien_0)
 del alien_0['points']
 print(alien_0)
+
+#Multiple Lines Dictionarie
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+}
+
+print(favorite_languages)
