@@ -202,3 +202,27 @@ for name, languages in favorite_languages.items():
     for language in languages:
         print(f"- {language.title()}")
 #Here we use a nested for loop. The first for loop pulls out each person's name and their list of favorite languages. The second for loop works through each person's list of languages.
+
+#A Dictionary in a Dictionary
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+        },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+        },
+    }
+#Here we have a dictionary called users. The keys are usernames, and the values are themselves dictionaries with information about each user.
+for username, user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info['first']} {user_info['last']}"
+    location = user_info['location']
+    
+    print(f"\tFull name: {full_name.title()}")
+    print(f"\tLocation: {location.title()}")
+#Here we use a for loop to access the username and the dictionary of information for each user. Then we access the values in the inner dictionary by using the appropriate keys.
+#We store the user's first and last names in the variable full_name, and we store the user's location in the variable location. Finally, we print the information we have stored in those two variables.
