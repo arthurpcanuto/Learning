@@ -138,5 +138,67 @@ for language in set(favorite_languages.values()):
 languages = {'python', 'c', 'python', 'ruby', 'c'}
 print(languages)
 #The code above creates a set.
-#Unlike lists and dictionaries, sets are unordered. When you print a set, Python will display the elements
-#in an arbitrary order.
+#Unlike lists and dictionaries, sets are unordered. When you print a set, Python will display the elements in an arbitrary order.
+
+#Nesting
+#We can nes dictionaries inside lists, lists inside dictionaries, or even dictionaries inside dictionaries.
+
+#A List of Dictionaries
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+aliens = [alien_0, alien_1, alien_2]
+#Here we created three dictionaries, each representing a different alien. Then we placed the three dictionaries in a list called aliens.
+for alien in aliens:
+    print(alien)
+
+#A more realistic example of a list of dictionaries
+aliens = []
+#Here we start with an empty list. Then we use a for loop to create 30 green aliens.
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+#The range() function tells Python to execute the loop 30 times. Each time through the loop, a new alien is created and appended to the list aliens.
+#Now we will show the first 5 aliens that were created, and we will use a loop to print the total number of aliens that have been created.
+for alien in aliens[:5]:
+    print(alien)
+print("...")
+print(f"Total number of aliens: {len(aliens)}")
+print("\n")
+#Modifying the first 3 aliens
+for alien in aliens[:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['points'] = 10
+        alien['speed'] = 'medium'
+#Here we loop through the first three aliens in the list. If any of these aliens are green, we change their color to yellow, their point value to 10, and their speed to medium.
+print("The first 5 aliens are:")
+for alien in aliens[:5]:
+    print(alien)
+print("...")
+
+#A list in a Dictionary
+#If we use only a list, all we could really store is a list of the pizza's toppings. With a dictionary, the list of toppings can be just one aspect of the pizza we are describing.
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+#Here we define a dictionary called pizza. The key 'crust' has a value that describes the crust, and the key 'toppings' has a value that is a list of toppings.
+#To access any part of the information stored in the dictionary, we use the keys. To access the list of toppings, we use the key 'toppings'.
+print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:")
+for topping in pizza['toppings']:
+    print(f"- {topping}")
+#Here we use a for loop to work through the list of toppings that is stored as the value of the key 'toppings'.
+#Another example of a list in a dictionary
+favorite_languages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+    }
+#Here each key from favorite_languages is associated with a list of languages.
+for name, languages in favorite_languages.items():
+    print(f"\n{name.title()}'s favorite languages are:")
+    for language in languages:
+        print(f"- {language.title()}")
+#Here we use a nested for loop. The first for loop pulls out each person's name and their list of favorite languages. The second for loop works through each person's list of languages.
