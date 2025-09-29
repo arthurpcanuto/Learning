@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formatação de Textos</title>
-    <style>
-        mark {
-            background-color: aqua;
-        }
-    </style>
+    <title>Outras Formatações</title>
 </head>
 <body>
-    <h1>Princípais Formatações</h1>
-    <h2>Negrito / Destaque</h2>
-    <p>Nessa frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt;.</p>
-    <p>Nessa frase temos um <strong>termo em destaque</strong> usando a tag &lt;strong&gt;.</p>
-    <h2>Itálico / Ênfase</h2>
-    <p>Nesta frase temos um <i>termo em itálico</i> usando a tag &lt;i&gt;.</p>
-    <p>Nesta frase temos um <em>termo em itálico</em> usando a tag &lt;em&gt;. </p>
-    <h2>Texto Marcado</h2>
-    <p>Podemos criar também <mark>um texto marcado</mark> usando a tag &lt;mark&gt;.
-    </p>
-    <p>Aqui nós temos <mark >outro texto marcado</mark>.</p>
-    <h2>Texto Grande e Pequeno</h2>
-    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nesse parágrafo. Usando as tags &lt;big&gt; e &lt;small&gt;.</p>
-    <h2>Texto Excluído / Deletado</h2>
-    <p>Podemos marcar um <del>texto como excluído</del> para indicar que ele deve ser lido, mas não considerado. </p>
-    <h2>Texto Inserido</h2>
-    <p>Podemos marcar um <ins>texto como inserido</ins> dar uma ênfase e indicar que ele foi adicionado depois.</p>
-    <h2>Texto Sobrescrito</h2>
-    <p>Usamos texto sobrescrito para inserir coisas do tipo x<sup>2</sup> + 1 = 0.</p>
-    <h2>Texto Subscrito</h2>
-    <p>Usamos texto subscrito para inserir coisas do tipo H<sub>2</sub>0.</p>
+   <h1>Outras Formatações</h1>
+   <h2>Código Fonte / Pré-Formatação</h2>
+   <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+   <pre>
+       <code>
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é Par)
+            else:
+                print(f'O número {num} é ímpar')
+       </code>
+   </pre>
+   <h2>Citações</h2>
+   <p>César disse: <q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum qui expedita debitis facilis saepe est ex iure aut velit quaerat repellat modi dolor voluptatum, beatae soluta illo. Eum, dignissimos quas!</q></p>
+   <h2>Citações Completas</h2>
+   <p>Segundo Jeff Noble, no seu livro HTML para leigos:</p>
+   <blockquote>
+        A diferença entre elementos inline e um bloco de texto é importante.
+   </blockquote>
+   <h2>Abreviações</h2>
+   <p>Estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+   <h2>Texto Invertido</h2>
+   <p><bdo dir="rtl">Isso é um texto invertido, porque existe? Ainda não sei.</bdo></p>
 </body>
 </html>
